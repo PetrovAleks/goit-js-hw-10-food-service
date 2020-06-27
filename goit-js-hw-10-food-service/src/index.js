@@ -18,11 +18,13 @@ function themeSwitch() {
   if (refs.switch.checked) {
     localStorage.setItem('checked', true);
     refs.body.classList.add('dark-theme');
+    refs.body.classList.remove('light-theme');
     return;
   }
   if (!refs.switch.checked) {
     localStorage.removeItem('checked');
     refs.body.classList.remove('dark-theme');
+    refs.body.classList.add('light-theme');
     return;
   }
 }
@@ -34,5 +36,6 @@ function localSwitch() {
 
   if (swithchChecked) {
     refs.body.classList.add('dark-theme');
+    refs.body.classList.remove('light-theme');
   }
 }
